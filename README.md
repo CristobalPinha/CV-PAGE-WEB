@@ -26,16 +26,14 @@ CV-PAGE-WEB/
 ## 📌 Próximos pasos
 
 - 🔘 Cambiar el color del botón de la barra de navegación.
-- 📄 Agregar secciones: Experiencia, Educación, Habilidades, Proyectos.
+- 📄 Agregar secciones: Experiencia, Educación, Habilidades.
 - 🧭 Mejorar la navegación entre secciones.
 - 📱 Hacer el sitio responsive para móviles y tablets.
-- 🌐 Agregar soporte multilenguaje (opcional).
 
 ## 🚀 Tecnologías utilizadas
 
 - HTML5  
 - CSS3  
-- JavaScript (solo para animaciones simples)
 
 ## 🎯 Objetivo
 
