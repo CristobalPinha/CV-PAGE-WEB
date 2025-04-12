@@ -1,0 +1,273 @@
+header {
+    background-image: url('img/background.jpg');
+    background-size: cover; /* Asegura que la imagen cubra todo el área */
+    background-position: center; /* Centra la imagen de fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    height: 1080px; /* Altura del header */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra verticalmente el contenido */
+    align-items: center; /* Centra horizontalmente el contenido */
+}
+
+h1{
+    color: white;
+    font-size: 3em;
+    text-align: center;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra para mejorar la legibilidad */  
+}
+
+.carrer {
+    font-size: 0.9em; /* Texto más pequeño */
+    color: #d3d3d3; /* Tono gris claro */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Sombra ligera */
+    margin-top: -5px; /* Ajusta el espaciado para acercarlo al nombre */
+}
+
+.img-profile img {
+    width: 410px; /* Tamaño de la imagen */
+    height: 410px;
+    border: 10px solid #343a40; /* Borde grueso */
+    border-radius: 50%; /* Forma circular */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); /* Sombra */
+    transition: all 0.3s ease; /* Transición suave para el efecto */
+    cursor: pointer; /* Cambia el cursor al pasar sobre la imagen */
+}
+
+.img-profile img:hover {
+    border-color: #4dc3ff; /* Cambia el borde al color celeste medio verdoso */
+    box-shadow: 0px 4px 12px #4dc3ff; /* Sombra iluminada del mismo color */
+}
+
+.img-profile img:hover + .profile {
+    transform: translateX(-50px); /* Mueve la foto de perfil hacia la izquierda */
+}
+
+.img-profile img:hover ~ .profile-right {
+    transform: translateX(0); /* Mueve la sección "Sobre Mí" a su posición original */
+    opacity: 1; /* Hace visible la sección "Sobre Mí" */
+}
+
+.profile-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra horizontalmente */
+    justify-content: center; /* Centra verticalmente */
+    text-align: center; /* Asegura que el texto esté centrado */
+    margin-top: 0; /* Elimina márgenes adicionales */
+}
+
+.img-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.5s ease; /* Transición suave para el movimiento */
+    cursor: pointer; /* Cambia el cursor al pasar sobre la imagen */
+}
+
+.profile-section h1 {
+    font-weight: bold; /* Texto en negrita */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    color: white; /* Color blanco */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra para mejorar la legibilidad */
+    margin: 10px 0; /* Espaciado entre el nombre y la carrera */
+}
+
+.navbar {
+    background-color: #343a407c !important; /* Gris oscuro */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); /* Sombra debajo de la navbar */
+}
+
+.navbar-nav .nav-link {
+    color: white !important; /* Color blanco para los enlaces */
+    font-weight: bold; /* Texto en negrita */
+    transition: color 0.3s ease; /* Transición suave al cambiar de color */
+}
+
+.navbar-nav .nav-link.active {
+    color: #4dc3ff !important; /* Cambia el color del enlace activo a celeste medio verdoso */
+    font-weight: bold; /* Texto en negrita */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #4dc3ff !important; /* Cambia a celeste medio verdoso al pasar el mouse */
+}
+
+.navbar-nav .nav-link i {
+    margin-right: 3px; /* Espacio entre el ícono y el texto */
+}
+
+.navbar-nav .nav-item {
+    margin: 0 15px; /* Agrega espacio horizontal entre las categorías */
+}
+
+.profile-container {
+    display: flex;
+    flex-direction: column; /* Alinea los elementos verticalmente */
+    align-items: center; /* Centra horizontalmente */
+    justify-content: center; /* Centra verticalmente */
+    position: relative; /* Necesario para posicionar los elementos */
+    overflow: visible; /* Asegura que los bordes no se corten */
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+    padding: 0 20px; /* Agrega espacio interno para evitar cortes */
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.5s ease; /* Transición suave para el movimiento */
+    cursor: pointer; /* Cambia el cursor al pasar sobre la imagen */
+}
+
+.profile-right {
+    opacity: 0; /* Oculta inicialmente la sección "Sobre Mí" */
+    transform: translateY(100%) scale(0.9); /* Mueve la sección fuera de la vista y la escala ligeramente */
+    transition: transform 0.5s ease, opacity 0.5s ease; /* Transición suave para el despliegue */
+    color: white; /* Color blanco para el texto */
+    text-align: center; /* Centra el texto horizontalmente */
+    max-width: 600px; /* Limita el ancho del texto */
+    margin: 20px auto; /* Centra el contenido horizontalmente */
+    background: rgba(52, 58, 64, 0.8); /* Mismo color que la barra (gris oscuro con transparencia) */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0px 0px 15px 2px #4dc3ff; /* Brillo fino con color celeste medio verdoso */
+}
+
+.profile-container:hover .img-profile {
+    transform: translateY(-50px); /* Mueve la imagen, el nombre y la carrera hacia arriba */
+}
+
+.profile-container:hover .img-profile img {
+    border-color: #ff4d6d; /* Cambia el borde al color rojo-rosado */
+    box-shadow: 0px 4px 12px #ff4d6d; /* Sombra iluminada del mismo color */
+}
+
+.profile-container:hover .profile-right {
+    transform: translateY(0) scale(1); /* Mueve la sección a su posición original y elimina la escala */
+    opacity: 1; /* Hace visible la sección "Sobre Mí" */
+}
+
+.profile h1 {
+    font-weight: bold; /* Texto en negrita */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    color: white; /* Color blanco */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra para mejorar la legibilidad */
+    margin: 10px 0; /* Espaciado entre el nombre y la carrera */
+}
+
+.carrer {
+    font-size: 0.9em; /* Texto más pequeño */
+    color: #d3d3d3; /* Tono gris claro */
+    margin-top: -5px; /* Ajusta el espaciado */
+}
+
+.about-me h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: white; /* Color blanco para el título */
+    font-weight: bold; /* Negrita para resaltar */
+}
+
+.about-me p {
+    font-size: 1em; /* Tamaño de fuente más grande */
+    line-height: 1.8; /* Mejora la legibilidad */
+    color: white; /* Color blanco para el texto */
+    font-family: Arial, sans-serif; /* Fuente predeterminada */
+    font-weight: bold; /* Texto en negrita */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Sombra ligera */
+    text-transform: none; /* Elimina las mayúsculas */
+}
+
+.about-me p .highlight {
+    color: #4dc3ff; /* Cambia el color de las palabras destacadas a celeste medio verdoso */
+    font-weight: bold; /* Negrita */
+}
+
+.about-me p::after {
+    content: ''; /* Línea que parpadea */
+    display: none; /* Oculta la línea parpadeante */
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.5s ease; /* Transición suave para el movimiento */
+    cursor: pointer; /* Cambia el cursor al pasar sobre la imagen */
+}
+
+.profile-container:hover .profile {
+    transform: translateY(-50px); /* Mueve la imagen y la información hacia arriba */
+}
+
+.profile-info {
+    text-align: center;
+    margin-top: 10px; /* Espaciado entre la imagen y el texto */
+}
+
+.profile-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.5s ease; /* Transición suave para el movimiento */
+}
+
+.profile-content img {
+    width: 410px; /* Tamaño de la imagen */
+    height: 410px;
+    border: 10px solid #343a40; /* Borde grueso */
+    border-radius: 50%; /* Forma circular */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); /* Sombra */
+    transition: all 0.3s ease; /* Transición suave para el efecto */
+}
+
+.profile-container:hover .profile-content img {
+    border-color: #4dc3ff; /* Cambia el borde al color rojo-rosado */
+    box-shadow: 0px 4px 12px #4dc3ff; /* Sombra iluminada del mismo color */
+}
+
+.profile-content h1 {
+    font-weight: bold; /* Texto en negrita */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    color: white; /* Color blanco */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra para mejorar la legibilidad */
+    margin: 10px 0; /* Espaciado entre el nombre y la carrera */
+}
+
+.carrer {
+    font-size: 0.9em; /* Texto más pequeño */
+    color: #d3d3d3; /* Tono gris claro */
+    margin-top: -5px; /* Ajusta el espaciado */
+}
+
+.profile-right {
+    opacity: 0; /* Oculta inicialmente la sección "Sobre Mí" */
+    transform: translateY(100%) scale(0.9); /* Mueve la sección fuera de la vista y la escala ligeramente */
+    transition: transform 0.5s ease, opacity 0.5s ease; /* Transición suave para el despliegue */
+    color: white; /* Color blanco para el texto */
+    text-align: center; /* Centra el texto horizontalmente */
+    max-width: 600px; /* Limita el ancho del texto */
+    margin: 20px auto; /* Centra el contenido horizontalmente */
+    background: rgba(52, 58, 64, 0.8); /* Mismo color que la barra (gris oscuro con transparencia) */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0px 0px 15px 2px #4dc3ff; /* Brillo fino con color celeste medio verdoso */
+}
+
+.profile-container:hover .profile-right {
+    transform: translateY(0) scale(1); /* Mueve la sección a su posición original y elimina la escala */
+    opacity: 1; /* Hace visible la sección "Sobre Mí" */
+}
+
+.profile-content img:hover ~ .profile-right {
+    transform: translateY(0) scale(1); /* Mueve la sección a su posición original y elimina la escala */
+    opacity: 1; /* Hace visible la sección "Sobre Mí" */
+    box-shadow: 0px 0px 15px 2px #4dc3ff; /* Brillo fino con color celeste medio verdoso */
+}
+
+
+
