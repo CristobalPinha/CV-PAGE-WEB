@@ -1,0 +1,644 @@
+/* ===========================
+General Styles
+=========================== */
+html, body {
+    background: #000; /* Fondo completamente negro */
+    color: white; /* Texto blanco por defecto */
+    margin: 0; /* Elimina márgenes */
+    padding: 0; /* Elimina rellenos */
+    height: 100%; /* Asegura que el fondo cubra toda la altura */
+    font-family: Arial, sans-serif; /* Fuente predeterminada */
+}
+
+/* ===========================
+Navbar
+=========================== */
+.navbar {
+    background-color: #343a407c !important; /* Gris oscuro */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); /* Sombra debajo de la navbar */
+}
+
+.navbar-nav .nav-link {
+    color: white !important; /* Color blanco para los enlaces */
+    font-weight: bold; /* Texto en negrita */
+    transition: color 0.3s ease; /* Transición suave al cambiar de color */
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:hover {
+    color: #4dc3ff !important; /* Celeste medio verdoso */
+}
+
+/* ===========================
+Header
+=========================== */
+/* Ruta relativa para acceder a las imágenes */
+header {
+    background-image: url('../img/background.jpg'); /* Sube un nivel y entra a la carpeta img */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 1080px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 0;
+}
+
+header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px; /* Ajusta la altura de la sombra */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)); /* Sombra negra */
+    pointer-events: none;
+}
+
+h1 {
+    color: white;
+    font-size: 3em;
+    text-align: center;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.carrer {
+    font-size: 0.9em;
+    color: #d3d3d3;
+    margin-top: -5px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.img-profile img {
+    width: 410px; /* Tamaño predeterminado */
+    height: 410px; /* Tamaño predeterminado */
+    border-width: 10px; /* Grosor del borde */
+    border-radius: 50%; /* Forma circular */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); /* Sombra */
+    transition: all 0.3s ease; /* Transición suave para el efecto */
+    display: block; /* Elimina espacios extra alrededor de la imagen */
+    margin: 0 auto; /* Centra la imagen */
+}
+
+.img-profile img:hover {
+    border-color: #4dc3ff; /* Cambia el borde al color celeste medio verdoso */
+    box-shadow: 0px 4px 12px #4dc3ff; /* Sombra iluminada del mismo color */
+}
+
+.img-profile img:hover + .profile {
+    transform: translateX(-50px); /* Mueve la foto de perfil hacia la izquierda */
+}
+
+.img-profile img:hover ~ .profile-right {
+    transform: translateX(0); /* Mueve la sección "Sobre Mí" a su posición original */
+    opacity: 1; /* Hace visible la sección "Sobre Mí" */
+}
+
+.profile-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra horizontalmente */
+    justify-content: center; /* Centra verticalmente */
+    text-align: center; /* Asegura que el texto esté centrado */
+    margin-top: 0; /* Elimina márgenes adicionales */
+}
+
+.img-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.5s ease; /* Transición suave para el movimiento */
+    cursor: pointer; /* Cambia el cursor al pasar sobre la imagen */
+}
+
+.profile-section h1 {
+    font-weight: bold; /* Texto en negrita */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    color: white; /* Color blanco */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra para mejorar la legibilidad */
+    margin: 10px 0; /* Espaciado entre el nombre y la carrera */
+}
+
+.profile-container {
+    display: flex;
+    flex-direction: column; /* Alinea los elementos verticalmente */
+    align-items: center; /* Centra horizontalmente */
+    justify-content: center; /* Centra verticalmente */
+    position: relative; /* Necesario para posicionar los elementos */
+    overflow: visible; /* Asegura que los bordes no se corten */
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+    padding: 0 20px; /* Agrega espacio interno para evitar cortes */
+    background-color: transparent; /* Asegura que no haya fondo blanco */
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.5s ease; /* Transición suave para el movimiento */
+    cursor: pointer; /* Cambia el cursor al pasar sobre la imagen */
+}
+
+.profile-right {
+    opacity: 0; /* Oculta inicialmente la sección "Sobre Mí" */
+    transform: translateY(100%) scale(0.9); /* Mueve la sección fuera de la vista y la escala ligeramente */
+    transition: transform 0.5s ease, opacity 0.5s ease; /* Transición suave para el despliegue */
+    color: white; /* Color blanco para el texto */
+    text-align: center; /* Centra el texto horizontalmente */
+    max-width: 600px; /* Limita el ancho del texto */
+    margin: 20px auto; /* Centra el contenido horizontalmente */
+    background: rgba(52, 58, 64, 0.8); /* Fondo oscuro con transparencia */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0px 0px 15px 2px #4dc3ff; /* Brillo fino con color celeste medio verdoso */
+}
+
+.profile-container:hover .img-profile {
+    transform: translateY(-50px); /* Mueve la imagen, el nombre y la carrera hacia arriba */
+}
+
+.profile-container:hover .img-profile img {
+    border-color: #ff4d6d; /* Cambia el borde al color rojo-rosado */
+    box-shadow: 0px 4px 12px #ff4d6d; /* Sombra iluminada del mismo color */
+}
+
+.profile-container:hover .profile-right {
+    transform: translateY(0) scale(1); /* Mueve la sección a su posición original y elimina la escala */
+    opacity: 1; /* Hace visible la sección "Sobre Mí" */
+}
+
+.profile h1 {
+    font-weight: bold; /* Texto en negrita */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    color: white; /* Color blanco */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra para mejorar la legibilidad */
+    margin: 10px 0; /* Espaciado entre el nombre y la carrera */
+}
+
+.carrer {
+    font-size: 0.9em; /* Texto más pequeño */
+    color: #d3d3d3; /* Tono gris claro */
+    margin-top: -5px; /* Ajusta el espaciado */
+}
+
+.about-me h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: white; /* Color blanco para el título */
+    font-weight: bold; /* Negrita para resaltar */
+}
+
+.about-me p {
+    font-size: 1em; /* Tamaño de fuente más grande */
+    line-height: 1.8; /* Mejora la legibilidad */
+    color: white; /* Color blanco para el texto */
+    font-family: Arial, sans-serif; /* Fuente predeterminada */
+    font-weight: bold; /* Texto en negrita */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Sombra ligera */
+    text-transform: none; /* Elimina las mayúsculas */
+}
+
+.about-me p .highlight {
+    color: #4dc3ff; /* Cambia el color de las palabras destacadas a celeste medio verdoso */
+    font-weight: bold; /* Negrita */
+}
+
+.about-me p::after {
+    content: ''; /* Línea que parpadea */
+    display: none; /* Oculta la línea parpadeante */
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.5s ease; /* Transición suave para el movimiento */
+    cursor: pointer; /* Cambia el cursor al pasar sobre la imagen */
+}
+
+.profile-container:hover .profile {
+    transform: translateY(-50px); /* Mueve la imagen y la información hacia arriba */
+}
+
+.profile-info {
+    text-align: center;
+    margin-top: 10px; /* Espaciado entre la imagen y el texto */
+}
+
+.profile-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.5s ease; /* Transición suave para el movimiento */
+}
+
+.profile-content img {
+    width: 410px; /* Tamaño de la imagen */
+    height: 410px;
+    border: 10px solid #343a40; /* Borde grueso */
+    border-radius: 50%; /* Forma circular */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); /* Sombra */
+    transition: all 0.3s ease; /* Transición suave para el efecto */
+}
+
+.profile-container:hover .profile-content img {
+    border-color: #4dc3ff; /* Cambia el borde al color rojo-rosado */
+    box-shadow: 0px 4px 12px #4dc3ff; /* Sombra iluminada del mismo color */
+}
+
+.profile-content h1 {
+    font-weight: bold; /* Texto en negrita */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    color: white; /* Color blanco */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra para mejorar la legibilidad */
+    margin: 10px 0; /* Espaciado entre el nombre y la carrera */
+}
+
+.carrer {
+    font-size: 0.9em; /* Texto más pequeño */
+    color: #d3d3d3; /* Tono gris claro */
+    margin-top: -5px; /* Ajusta el espaciado */
+}
+
+.profile-right {
+    opacity: 0; /* Oculta inicialmente la sección "Sobre Mí" */
+    transform: translateY(100%) scale(0.9); /* Mueve la sección fuera de la vista y la escala ligeramente */
+    transition: transform 0.5s ease, opacity 0.5s ease; /* Transición suave para el despliegue */
+    color: white; /* Color blanco para el texto */
+    text-align: center; /* Centra el texto horizontalmente */
+    max-width: 600px; /* Limita el ancho del texto */
+    margin: 20px auto; /* Centra el contenido horizontalmente */
+    background: rgba(52, 58, 64, 0.8); /* Fondo oscuro con transparencia */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0px 0px 15px 2px #4dc3ff; /* Brillo fino con color celeste medio verdoso */
+}
+
+.profile-container:hover .profile-right {
+    transform: translateY(0) scale(1); /* Mueve la sección a su posición original y elimina la escala */
+    opacity: 1; /* Hace visible la sección "Sobre Mí" */
+}
+
+.profile-content img:hover ~ .profile-right {
+    transform: translateY(0) scale(1); /* Mueve la sección a su posición original y elimina la escala */
+    opacity: 1; /* Hace visible la sección "Sobre Mí" */
+    box-shadow: 0px 0px 15px 2px #4dc3ff; /* Brillo fino con color celeste medio verdoso */
+}
+
+/* ===========================
+About Section
+=========================== */
+.description {
+    background: #000; /* Fondo completamente negro */
+    padding: 80px 20px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative; /* Necesario para el pseudo-elemento */
+}
+
+.description::after {
+    content: '';
+    position: absolute;
+    bottom: -30px; /* Coloca la sombra justo debajo de la sección */
+    left: 0;
+    width: 100%;
+    height: 30px; /* Altura de la sombra */
+    background: rgba(0, 0, 0, 0.8); /* Sombra negra */
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.8); /* Sombra difusa */
+    pointer-events: none; /* Asegura que no interfiera con la interacción del usuario */
+    z-index: 1; /* Coloca la sombra por encima del fondo */
+}
+
+.description h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: white;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.card-container {
+    display: flex;
+    gap: 60px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    background: linear-gradient(145deg, rgba(52, 58, 64, 0.9), rgba(30, 30, 30, 0.9));
+    color: white;
+    padding: 40px;
+    border-radius: 20px;
+    border: 5px solid #343a40;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5), 0px 0px 15px 2px #4dc3ff;
+    max-width: 400px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    overflow: hidden;
+    position: relative;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.7), 0px 0px 20px 4px #4dc3ff;
+    border-color: #4dc3ff;
+}
+
+.card h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #4dc3ff;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.card ul li {
+    margin-bottom: 15px;
+    font-size: 1em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.card ul li i {
+    color: #4dc3ff;
+    font-size: 1.2em;
+}
+
+/* ===========================
+   My Resume Section
+=========================== */
+.resume {
+    background: #000;
+    background-image: url('../img/background-resume.png'); /* Sube un nivel y entra a la carpeta img */
+    background-size: cover; /* Asegura que la imagen cubra toda el área */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    padding: 80px 20px; /* Espaciado interno */
+    margin: 40px 0; /* Espaciado externo */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: white; /* Asegura que el texto sea visible sobre el fondo */
+    position: relative; /* Necesario para el pseudo-elemento */
+}
+
+.resume::before {
+    content: '';
+    position: absolute;
+    top: 0; /* Coloca la sombra justo donde comienza la imagen */
+    left: 0;
+    width: 100%;
+    height: 50px; /* Ajusta la altura de la sombra */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)); /* Sombra negra */
+    pointer-events: none; /* Asegura que no interfiera con la interacción del usuario */
+    z-index: 1; /* Coloca la sombra por encima del fondo */
+}
+
+/* Línea de tiempo */
+.timeline {
+    position: relative;
+    padding: 20px 0;
+    width: 100%;
+    max-width: 800px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 100%;
+    background: #4dc3ff; /* Línea central */
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 40px;
+    width: calc(50% - 20px);
+    opacity: 0; /* Oculta inicialmente */
+    transform: translateY(50px); /* Desplaza hacia abajo inicialmente */
+    animation: slideIn 0.8s ease-out forwards; /* Aplica la animación */
+}
+
+.timeline-item:nth-child(odd) {
+    left: 0;
+    text-align: right;
+    animation-delay: 0.2s; /* Retraso para los elementos impares */
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+    text-align: left;
+    animation-delay: 0.4s; /* Retraso para los elementos pares */
+}
+
+/* Animación de deslizamiento */
+@keyframes slideIn {
+    to {
+        opacity: 1; /* Hace visible el elemento */
+        transform: translateY(0); /* Devuelve el elemento a su posición original */
+    }
+}
+
+.timeline-dot {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 15px;
+    height: 15px;
+    background: #4dc3ff; /* Color celeste medio verdoso */
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px 2px #4dc3ff;
+}
+
+.timeline-content {
+    position: relative;
+    padding: 10px 20px;
+    background: transparent; /* Sin fondo */
+    color: white;
+    text-align: inherit;
+}
+
+.timeline-content h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #4dc3ff; /* Color celeste medio verdoso */
+    text-transform: uppercase;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.timeline-content p {
+    font-size: 1em;
+    line-height: 1.8;
+    color: #d3d3d3; /* Tono gris claro */
+}
+
+/* Educación */
+.education {
+    width: 100%;
+    max-width: 800px;
+    margin-top: 40px;
+}
+
+.education h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #4dc3ff; /* Color celeste medio verdoso */
+    text-transform: uppercase;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.education-item {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.education-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #4dc3ff; /* Color celeste medio verdoso */
+    text-transform: uppercase;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.education-item p {
+    font-size: 1em;
+    line-height: 1.8;
+    color: #d3d3d3; /* Tono gris claro */
+}
+
+.experience-container, .education-container {
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 40px;
+}
+
+.experience-container h2, .education-container h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #4dc3ff; /* Color celeste medio verdoso */
+    text-transform: uppercase;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.experience-card, .education-card {
+    background: linear-gradient(145deg, rgba(52, 58, 64, 0.9), rgba(30, 30, 30, 0.9)); /* Fondo con degradado */
+    color: white; /* Texto blanco */
+    padding: 30px;
+    border-radius: 15px; /* Bordes redondeados */
+    border: 3px solid #343a40; /* Borde delgado */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5), 0px 0px 15px 2px #4dc3ff; /* Sombra elegante */
+    margin-bottom: 20px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-card:hover, .education-card:hover {
+    transform: translateY(-10px); /* Eleva la tarjeta al pasar el mouse */
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.7), 0px 0px 20px 4px #4dc3ff; /* Sombra más intensa */
+    border-color: #4dc3ff; /* Cambia el color del borde */
+}
+
+.experience-card h3, .education-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #4dc3ff; /* Color celeste medio verdoso */
+    text-transform: uppercase;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.experience-card p, .education-card p {
+    font-size: 1em;
+    line-height: 1.8;
+    color: #d3d3d3; /* Tono gris claro */
+    margin: 10px 0;
+}
+
+footer {
+    background: linear-gradient(145deg, #1a1a1a, #000); /* Fondo degradado oscuro */
+    color: white; /* Texto blanco para contraste */
+    padding: 40px 20px; /* Espaciado interno */
+    text-align: center;
+    position: relative;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 2px;
+    background: #4dc3ff; /* Línea decorativa celeste */
+    border-radius: 5px;
+}
+
+footer .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+footer .footer-icons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+footer .footer-icons a {
+    color: #4dc3ff; /* Color celeste para los íconos */
+    font-size: 1.5em;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+footer .footer-icons a:hover {
+    color: #ffffff; /* Cambia a blanco al pasar el mouse */
+    transform: scale(1.2); /* Aumenta ligeramente el tamaño */
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9em;
+    color: #d3d3d3; /* Tono gris claro */
+}
+
+footer a {
+    color: #4dc3ff; /* Color celeste para los enlaces */
+    text-decoration: none; /* Sin subrayado */
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ffffff; /* Cambia a blanco al pasar el mouse */
+}
+
+
+

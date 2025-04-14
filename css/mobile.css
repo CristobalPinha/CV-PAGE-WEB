@@ -1,0 +1,111 @@
+/* Mobile Styles */
+@media (max-width: 768px) {
+    /* Navbar */
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Header */
+    header {
+        height: auto; /* Ajusta la altura para pantallas pequeñas */
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2em; /* Reduce el tamaño del título */
+    }
+
+    .carrer {
+        font-size: 0.8em; /* Reduce el tamaño del subtítulo */
+    }
+
+    /* Imagen de perfil */
+    .img-profile img {
+        width: 250px; /* Ajusta el tamaño de la imagen */
+        height: 250px; /* Mantiene la proporción */
+        border-width: 5px; /* Reduce el grosor del borde */
+    }
+
+    /* About Section */
+    .description {
+        padding: 20px 10px; /* Reduce el padding */
+    }
+
+    .card-container {
+        flex-direction: column; /* Apila las tarjetas verticalmente */
+        gap: 15px; /* Reduce el espacio entre tarjetas */
+    }
+
+    .card {
+        padding: 20px; /* Reduce el padding interno */
+        font-size: 0.9em; /* Reduce el tamaño del texto */
+    }
+
+    /* Resume Section */
+    .resume {
+        padding: 20px 10px; /* Reduce el padding */
+    }
+
+    .timeline-item {
+        text-align: center; /* Centra el texto */
+    }
+
+    .timeline-content h3 {
+        font-size: 1.2em; /* Reduce el tamaño de los títulos */
+    }
+
+    .timeline-content p {
+        font-size: 0.9em; /* Reduce el tamaño del texto */
+    }
+
+    /* Footer */
+    footer {
+        padding: 15px 10px; /* Reduce el padding */
+    }
+
+    footer .footer-icons a {
+        font-size: 1.2em; /* Reduce el tamaño de los íconos */
+    }
+
+    footer p {
+        font-size: 0.8em; /* Reduce el tamaño del texto */
+    }
+}
+
+/* Ajustes específicos para pantallas más pequeñas (iPhone 12, 390px de ancho) */
+@media (max-width: 400px) {
+    .img-profile img {
+        width: 200px; /* Reduce aún más el tamaño de la imagen */
+        height: 200px;
+    }
+
+    h1 {
+        font-size: 1.8em; /* Reduce el tamaño del título */
+    }
+
+    .carrer {
+        font-size: 0.7em; /* Reduce el tamaño del subtítulo */
+    }
+
+    .card {
+        padding: 15px; /* Reduce el padding interno */
+        font-size: 0.8em; /* Reduce el tamaño del texto */
+    }
+
+    .timeline-content h3 {
+        font-size: 1em; /* Reduce el tamaño de los títulos */
+    }
+
+    .timeline-content p {
+        font-size: 0.8em; /* Reduce el tamaño del texto */
+    }
+
+    footer .footer-icons a {
+        font-size: 1em; /* Reduce el tamaño de los íconos */
+    }
+
+    footer p {
+        font-size: 0.7em; /* Reduce el tamaño del texto */
+    }
+}
