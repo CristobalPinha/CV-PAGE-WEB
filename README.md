@@ -4,14 +4,15 @@ Este proyecto es una versión inicial de mi Currículum Vitae en formato web. Es
 
 ## 🚧 Estado del Proyecto
 
-> 🟡 En desarrollo – Primera versión parcial completada.
+> 🟡 En desarrollo – Avanzando progresivamente hacia una versión completa.
 
 ## ✨ Funcionalidades actuales
 
 - 🎬 **Animaciones implementadas** en el menú principal para una experiencia más fluida.
 - 🖼️ **Imágenes ajustadas**: imagen de perfil y fondo correctamente alineadas y optimizadas.
-- 🧍‍♂️ **Sección "Sobre mí" finalizada**, incluyendo presentación personal y profesional.
-- 🎨 En proceso: **modificación del color del botón** en la barra de navegación.
+- 🧍‍♂️ **Sección "Sobre mí" completada**, con presentación personal y profesional.
+- 🧰 **Nueva sección "Herramientas" añadida**, donde se muestran tecnologías y lenguajes utilizados.
+- 🎨 En proceso: modificación del color del botón de la barra de navegación.
 
 ## 📁 Estructura del Proyecto
 
@@ -22,20 +23,20 @@ CV-PAGE-WEB/
 ├── style.css      # Archivo de estilos
 └── README.md      # Documentación del proyecto
 ```
-
 ## 📌 Próximos pasos
 
-- 🔘 Cambiar el color del botón de la barra de navegación.
-- 📄 Agregar secciones: Experiencia, Educación, Habilidades.
-- 🧭 Mejorar la navegación entre secciones.
-- 📱 Hacer el sitio responsive para móviles y tablets.
+- 🧠 Terminar las secciones de **Experiencia laboral** y **Contacto**.
+- 🎨 Cambiar el color del botón de la barra de navegación.
+- 📱 **Adaptar el diseño a dispositivos móviles (responsive)**.
+- 📦 **Comprimir y optimizar el archivo CSS** para mejorar tiempos de carga.
+- 🌐 (Opcional) Agregar soporte multilenguaje.
 
 ## 🚀 Tecnologías utilizadas
 
 - HTML5  
 - CSS3  
+- JavaScript (para animaciones simples)
 
 ## 🎯 Objetivo
 
 Desarrollar un CV web dinámico y moderno para mostrar mis conocimientos y evolución como desarrollador front-end. Este proyecto sirve como base para futuras mejoras y funcionalidades.
-
