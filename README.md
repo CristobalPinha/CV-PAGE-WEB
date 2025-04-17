@@ -29,13 +29,13 @@ Este proyecto es una versión inicial de mi Currículum Vitae en formato web. Es
 
 Se están aplicando principios de diseño accesible para que la web pueda ser utilizada por personas con distintas capacidades y contextos. Entre las mejoras actuales y planeadas están:
 
-- ✅ Elección de **tipografías claras** y sin ambigüedades.
-- ✅ Posibilidad de **ajustar el tamaño del texto** mediante accesibilidad del navegador.
-- ✅ Uso de **colores con alto contraste** para garantizar buena visibilidad.
-- ✅ Inclusión de **atributos alt** en imágenes y contenido visual.
-- ✅ Implementación de **HTML semántico** (uso correcto de etiquetas como `<header>`, `<main>`, `<section>`, etc.).
-- ✅ Navegación clara, sencilla e intuitiva.
-- ✅ Enlaces con **textos descriptivos** que evitan confusiones.
+- 🔄 Elección de **tipografías claras** y sin ambigüedades.
+- 🔄 Posibilidad de **ajustar el tamaño del texto** mediante accesibilidad del navegador.
+- 🔄 Uso de **colores con alto contraste** para garantizar buena visibilidad.
+- 🔄 Inclusión de **atributos alt** en imágenes y contenido visual.
+- 🔄 Implementación de **HTML semántico** (uso correcto de etiquetas como `<header>`, `<main>`, `<section>`, etc.).
+- 🔄 Navegación clara, sencilla e intuitiva.
+- 🔄 Enlaces con **textos descriptivos** que evitan confusiones.
 - 🔄 Futuro: incorporar **subtítulos o transcripciones** si se añaden contenidos multimedia.
 
 ## 🚀 Tecnologías utilizadas
