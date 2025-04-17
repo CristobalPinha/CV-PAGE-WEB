@@ -146,21 +146,22 @@ h1 {
 }
 
 .header-buttons {
-    display: flex; /* Coloca los botones en fila */
+    display: flex;
+    color : white;
     justify-content: center; /* Centra los botones horizontalmente */
-    gap: 15px; /* Espaciado entre los botones */
-    margin-top: 20px; /* Espaciado superior */
+    gap: 10px; /* Espaciado entre los botones */
+    margin-top: 10px; /* Espaciado superior opcional */
 }
 
 .header-buttons a {
-    color: #4dc3ff; /* Color celeste para los íconos */
-    font-size: 1.5rem; /* Tamaño de los íconos */
-    transition: color 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+    font-size: 1.5rem; /* Ajusta el tamaño de los íconos */
+    transition: transform 0.2s ease; /* Animación opcional */
 }
 
 .header-buttons a:hover {
-    color: white; /* Cambia a blanco al pasar el cursor */
-    transform: scale(1.2); /* Aumenta ligeramente el tamaño */
+    transform: scale(1.2); /* Efecto de zoom al pasar el cursor */
 }
 
 .header-buttons .btn {
