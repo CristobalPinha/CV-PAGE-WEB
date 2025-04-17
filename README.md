@@ -18,8 +18,8 @@ Este proyecto es una versión inicial de mi Currículum Vitae en formato web. Es
 
 ## 🆕 Cambios y objetivos recientes
 
-- ✅ Reemplazada la sección de **Experiencia laboral** por una de **Proyectos Universitarios**.
-- ✅ Se añadió una nueva sección de **Idiomas**, indicando el nivel de competencia.
+- 🔄 **Se reemplazará la sección de "Experiencia laboral" por "Proyectos Universitarios"**. Esta nueva sección está en desarrollo y presentará trabajos realizados durante la carrera.
+- 🔄 **Se añadirá una nueva sección de "Idiomas"**, mostrando niveles de competencia (A2, B1, etc.). También en proceso.
 - ✅ Se reorganizó la sección de **Herramientas y habilidades**, ahora dividida en:
   - **Habilidades Técnicas** (lenguajes, frameworks, herramientas de desarrollo).
   - **Habilidades Blandas** (comunicación, trabajo en equipo, adaptabilidad, etc.).
