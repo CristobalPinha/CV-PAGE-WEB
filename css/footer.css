@@ -1,0 +1,62 @@
+/* ===========================
+Footer
+=========================== */
+footer {
+    background: linear-gradient(145deg, #1a1a1a, #000); /* Fondo degradado oscuro */
+    color: white; /* Texto blanco para contraste */
+    padding: 40px 20px; /* Espaciado interno */
+    text-align: center;
+    position: relative;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 2px;
+    background: #4dc3ff; /* Línea decorativa celeste */
+    border-radius: 5px;
+}
+
+footer .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+footer .footer-icons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+footer .footer-icons a {
+    color: #4dc3ff; /* Color celeste para los íconos */
+    font-size: 1.5em;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+footer .footer-icons a:hover {
+    color: #ffffff; /* Cambia a blanco al pasar el mouse */
+    transform: scale(1.2); /* Aumenta ligeramente el tamaño */
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9em;
+    color: #d3d3d3; /* Tono gris claro */
+}
+
+footer a {
+    color: #4dc3ff; /* Color celeste para los enlaces */
+    text-decoration: none; /* Sin subrayado */
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ffffff; /* Cambia a blanco al pasar el mouse */
+}

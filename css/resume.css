@@ -1,0 +1,112 @@
+/* ===========================
+My Resume Section
+=========================== */
+.resume {
+    background: #000;
+    background-image: url('../img/background-resume.png'); /* Sube un nivel y entra a la carpeta img */
+    background-size: cover; /* Asegura que la imagen cubra toda el área */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    padding: 80px 20px; /* Espaciado interno */
+    margin: 40px 0; /* Espaciado externo */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: white; /* Asegura que el texto sea visible sobre el fondo */
+    position: relative; /* Necesario para el pseudo-elemento */
+}
+
+.resume::before {
+    content: '';
+    position: absolute;
+    top: 0; /* Coloca la sombra justo donde comienza la imagen */
+    left: 0;
+    width: 100%;
+    height: 50px; /* Ajusta la altura de la sombra */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)); /* Sombra negra */
+    pointer-events: none; /* Asegura que no interfiera con la interacción del usuario */
+    z-index: 1; /* Coloca la sombra por encima del fondo */
+}
+
+/* Línea de tiempo */
+.timeline {
+    position: relative;
+    padding: 20px 0;
+    width: 100%;
+    max-width: 800px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 100%;
+    background: #4dc3ff; /* Línea central */
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 40px;
+    width: calc(50% - 20px);
+    opacity: 0; /* Oculta inicialmente */
+    transform: translateY(50px); /* Desplaza hacia abajo inicialmente */
+    animation: slideIn 0.8s ease-out forwards; /* Aplica la animación */
+}
+
+.timeline-item:nth-child(odd) {
+    left: 0;
+    text-align: right;
+    animation-delay: 0.2s; /* Retraso para los elementos impares */
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+    text-align: left;
+    animation-delay: 0.4s; /* Retraso para los elementos pares */
+}
+
+/* Animación de deslizamiento */
+@keyframes slideIn {
+    to {
+        opacity: 1; /* Hace visible el elemento */
+        transform: translateY(0); /* Devuelve el elemento a su posición original */
+    }
+}
+
+.timeline-dot {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 15px;
+    height: 15px;
+    background: #4dc3ff; /* Color celeste medio verdoso */
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px 2px #4dc3ff;
+}
+
+.timeline-content {
+    position: relative;
+    padding: 10px 20px;
+    background: transparent; /* Sin fondo */
+    color: white;
+    text-align: inherit;
+}
+
+.timeline-content h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #4dc3ff; /* Color celeste medio verdoso */
+    text-transform: uppercase;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.timeline-content p {
+    font-size: 1em;
+    line-height: 1.8;
+    color: #d3d3d3; /* Tono gris claro */
+}

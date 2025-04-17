@@ -1,0 +1,95 @@
+/* ===========================
+About Section
+=========================== */
+.description {
+    background: #000; /* Fondo completamente negro */
+    padding: 80px 20px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative; /* Necesario para el pseudo-elemento */
+}
+
+.description::after {
+    content: '';
+    position: absolute;
+    bottom: -30px; /* Coloca la sombra justo debajo de la sección */
+    left: 0;
+    width: 100%;
+    height: 30px; /* Altura de la sombra */
+    background: rgba(0, 0, 0, 0.8); /* Sombra negra */
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.8); /* Sombra difusa */
+    pointer-events: none; /* Asegura que no interfiera con la interacción del usuario */
+    z-index: 1; /* Coloca la sombra por encima del fondo */
+}
+
+.description h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: white;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.card-container {
+    display: flex; /* Coloca las tarjetas en fila */
+    gap: 60px; /* Espaciado entre las tarjetas */
+    justify-content: center; /* Centra las tarjetas horizontalmente */
+    flex-wrap: nowrap; /* Evita que las tarjetas se ajusten en filas separadas */
+}
+
+.card {
+    background: linear-gradient(145deg, rgba(52, 58, 64, 0.9), rgba(30, 30, 30, 0.9));
+    color: white;
+    padding: 40px;
+    border-radius: 20px;
+    border: 5px solid #343a40;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5), 0px 0px 15px 2px #4dc3ff;
+    flex: 1 1 400px; /* Ambas tarjetas tendrán el mismo ancho mínimo de 400px */
+    max-width: 400px; /* Limita el ancho máximo */
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 40px; /* Espacio entre las tarjetas */
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.7), 0px 0px 20px 4px #4dc3ff;
+    border-color: #4dc3ff;
+}
+
+.card h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #4dc3ff;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.card ul li {
+    margin-bottom: 30px;
+    font-size: 1em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.card ul li i {
+    color: #4dc3ff;
+    font-size: 1.2em;
+}

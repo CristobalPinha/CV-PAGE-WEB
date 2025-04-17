@@ -1,0 +1,181 @@
+/* ===========================
+Navbar
+=========================== */
+.navbar {
+    background-color: #343a407c !important; /* Gris oscuro */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); /* Sombra debajo de la navbar */
+    height: 8%; /* Aumenta la altura un 5% */
+    padding: 1rem 1rem; /* Ajusta el padding para mayor tamaño */
+}
+
+.navbar-nav .nav-link {
+    color: white !important; /* Color blanco para los enlaces */
+    font-weight: bold; /* Texto en negrita */
+    font-size: 1.2rem; /* Aumenta ligeramente el tamaño de la fuente */
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Espaciado entre el icono y el texto */
+    transition: color 0.3s ease; /* Transición suave al cambiar de color */
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:hover {
+    color: #4dc3ff !important; /* Celeste medio verdoso */
+}
+
+.navbar-toggler {
+    font-size: 1.5rem; /* Aumenta el tamaño del ícono del toggler */
+}
+
+.btn-outline-light {
+    font-size: 1.1rem; /* Ajusta el tamaño del botón de GitHub */
+    padding: 0.6rem 1.2rem; /* Ajusta el padding del botón */
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Espaciado entre el icono y el texto */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-outline-light:hover {
+    background-color: #4dc3ff; /* Fondo celeste al pasar el cursor */
+    color: white; /* Texto blanco */
+}
+
+/* ===========================
+Header
+=========================== */
+header {
+    background-image: url('../img/background.jpg'); /* Sube un nivel y entra a la carpeta img */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 1080px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 0;
+}
+
+header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px; /* Ajusta la altura de la sombra */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)); /* Sombra negra */
+    pointer-events: none;
+}
+
+h1 {
+    color: white;
+    font-size: 3em;
+    text-align: center;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
+    border-radius: 20px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5), 0px 0px 15px 2px #4dc3ff;
+    max-width: 600px; /* Más ancho */
+    width: 90%;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.profile-container:hover {
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.7), 0px 0px 20px 4px #4dc3ff; /* Iluminación al pasar el cursor */
+    transform: translateY(-5px); /* Efecto de elevación */
+}
+
+.profile-container img {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%; /* Hace la imagen circular */
+    object-fit: cover; /* Asegura que la imagen se adapte al tamaño */
+    border: 5px solid #808080; /* Marco gris solo para la foto */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.profile-container h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: white;
+    margin: 10px 0 5px;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.profile-container h3 {
+    font-size: 1.2em; /* Más pequeño */
+    font-weight: normal;
+    color: #d3d3d3; /* Gris claro */
+    margin: 0 0 15px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.profile-container p.career {
+    font-size: 1.2em;
+    color: #d3d3d3;
+    margin: 0 0 15px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.profile-container p.profile-description {
+    font-size: 1em;
+    color: white;
+    font-weight: bold; /* Negrita para el párrafo */
+    line-height: 1.8;
+    text-align: center; /* Centrado */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.profile-container p.profile-description .highlight {
+    color: #4dc3ff; /* Color del brillo para "estudiante" */
+    font-weight: bold; /* Negrita para la palabra destacada */
+}
+
+.header-buttons {
+    display: flex; /* Coloca los botones en fila */
+    justify-content: center; /* Centra los botones horizontalmente */
+    gap: 15px; /* Espaciado entre los botones */
+    margin-top: 20px; /* Espaciado superior */
+}
+
+.header-buttons a {
+    color: #4dc3ff; /* Color celeste para los íconos */
+    font-size: 1.5rem; /* Tamaño de los íconos */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.header-buttons a:hover {
+    color: white; /* Cambia a blanco al pasar el cursor */
+    transform: scale(1.2); /* Aumenta ligeramente el tamaño */
+}
+
+.header-buttons .btn {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    color: white;
+    border: 2px solid #4dc3ff; /* Borde celeste */
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Espaciado entre el ícono y el texto */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.header-buttons .btn:hover {
+    background-color: #4dc3ff; /* Fondo celeste al pasar el cursor */
+    color: white; /* Texto blanco */
+}

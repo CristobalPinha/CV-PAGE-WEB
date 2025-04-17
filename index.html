@@ -4,68 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Currículum Vitae Web</title>
+    <!-- General Styles -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- Section-Specific Styles -->
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/resume.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <!-- Mobile Styles -->
     <link rel="stylesheet" href="css/mobile.css?v=1.0">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-
 </head>
-<header>
-    <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#home"><i class="fas fa-home"></i> Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about"><i class="fas fa-user"></i> About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#resume"><i class="fas fa-file-alt"></i> Resume</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact"><i class="fas fa-envelope"></i> Contact</a>
-                    </li>
-                </ul>
-                <!-- Enlace a GitHub -->
-                <a href="https://github.com/CristobalPinha" target="_blank" class="btn btn-outline-light ms-3">
-                    <i class="fab fa-github"></i> GitHub
-                </a>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#home"><i class="fas fa-home"></i> Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about"><i class="fas fa-user"></i> About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#resume"><i class="fas fa-file-alt"></i> Resume</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+                        </li>
+                    </ul>
+                    <!-- GitHub Link -->
+                    <a href="https://github.com/CristobalPinha" target="_blank" class="btn btn-outline-light ms-3">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                </div>
             </div>
-        </div>
-    </nav>
-
-    <section id="home" class="profile-container">
-        <!-- Foto de perfil, nombre y carrera -->
-        <div class="profile">
-            <div class="profile-content">
-                <img src="img/profile.JPEG" alt="Profile Image" class="img-fluid rounded-circle">
-                <h1 class="mt-3">Cristobal Piña</h1>
-                <p class="carrer">Estudiante Ingeniería en Informática</p>
+        </nav>
+        <section id="home" class="profile-container">
+            <img src="img/profile.jpeg" alt="Foto de Perfil">
+            <h1>Cristóbal Ignacio Piña Rivas</h1>
+            <h3>Estudiante Ingeniería en Informática</h3>
+            <p class="profile-description">
+                Soy <span class="highlight">estudiante</span> de <span class="highlight">ingeniería en informática</span> en la UTEM, actualmente en mi tercer año. Me interesa el desarrollo de software y estoy aplicando lo que he aprendido realizando páginas web. Aún me considero en etapa de aprendizaje, pero busco seguir desarrollándome profesionalmente y aprovechar nuevas oportunidades para crecer en el área.
+            </p>
+            <!-- Botones -->
+            <div class="header-buttons">
+                <a href="mailto:cristobbalp@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/cristobal-pinha" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/CristobalPinha" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="tel:+56965076547"><i class="fas fa-phone"></i></a>
             </div>
-        </div>
+        </section>
+    </header>
 
-        <!-- Sobre Mí -->
-        <div class="profile-right">
-            <div class="about-me">
-                <h2>Sobre Mí</h2>
-                <p>
-                    Soy <span class="highlight">estudiante</span> de <span class="highlight">ingeniería en informática</span> en la UTEM, actualmente en mi tercer año. Me interesa el desarrollo de software y estoy aplicando lo que he aprendido realizando páginas web. Aún me considero en etapa de aprendizaje, pero busco seguir desarrollándome profesionalmente y aprovechar nuevas oportunidades para crecer en el área.
-                </p>
-            </div>
-        </div>
-    </section>
-</header>
-
-<section id="about" class="description">
-    <h2>About</h2>
-    <div class="card-container">
-        <!-- Tarjeta de Información Personal -->
+    <!-- About Section -->
+    <section id="about" class="description">
+        <h2>About</h2>
+        <!-- Información Personal -->
         <div class="card">
             <h2><i class="fas fa-user"></i> Información Personal</h2>
             <ul>
@@ -73,87 +75,88 @@
                 <li><i class="fas fa-id-card"></i> <strong>RUT:</strong> 21.716.770-1</li>
                 <li><i class="fas fa-phone"></i> <strong>Teléfono:</strong> +56 9 6507 6547</li>
                 <li><i class="fas fa-envelope"></i> <strong>Correo:</strong> cristobbalp@gmail.com</li>
-                <li><i class="fas fa-map-marker-alt"></i> <strong>Dirección:</strong> Santiado de Chile</li>
+                <li><i class="fas fa-map-marker-alt"></i> <strong>Dirección:</strong> Santiago de Chile</li>
             </ul>
         </div>
-
-        <!-- Tarjeta de Habilidades -->
-        <div class="card">
-            <h2><i class="fas fa-lightbulb"></i> Habilidades</h2>
-            <ul>
-                <li><i class="fas fa-code"></i> Desarrollo de software y programación.</li>
-                <li><i class="fas fa-rocket"></i> Conocimientos en tecnologías emergentes.</li>
-                <li><i class="fas fa-tasks"></i> Gestión de proyectos informáticos.</li>
-                <li><i class="fas fa-brain"></i> Capacidad de aprendizaje continuo.</li>
-                <li><i class="fas fa-cogs"></i> Resolución de problemas complejos.</li>
-            </ul>
-        </div>
-
-        <!-- Tarjeta de Herramientas -->
-        <div class="card">
-            <h2><i class="fas fa-tools"></i> Herramientas</h2>
-            <ul>
-                <li><i class="fas fa-code"></i> Visual Studio Code</li>
-                <li><i class="fab fa-github"></i> GitHub</li>
-                <li><i class="fas fa-database"></i> MySQL, PostgreSQL</li>
-                <li><i class="fas fa-terminal"></i> C++, Python, JavaScript</li>
-                <li><i class="fas fa-file-code"></i> HTML, CSS</li>
-                <li><i class="fas fa-layer-group"></i> Django</li>
-            </ul>
-        </div>
-    </div>
-</section>
-
-<section id="resume" class="resume">
-    <h2>My Resume</h2>
-
-    <!-- Experiencia Laboral -->
-    <div class="timeline">
-        <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-                <h3>Operario CCTV</h3>
-                <p><strong>Rocktech</strong> - ENE 2023 a FEB 2023</p>
-                <p>
-                    Primera experiencia laboral antes de ingresar a la universidad, donde desarrollé mis habilidades y enfrenté nuevos desafíos. Trabajé en equipo asegurando una buena coordinación entre turnos y aprendí a manejar protocolos y situaciones de alta presión con calma.
-                </p>
+        <!-- Habilidades -->
+        <h2>Habilidades</h2>
+        <div class="card-container">
+            <!-- Skills Card -->
+            <div class="card">
+                <h2><i class="fas fa-lightbulb"></i> Técnicas</h2>
+                <ul>
+                    <li><i class="fas fa-code"></i> Desarrollo de software y programación.</li>
+                    <li><i class="fas fa-rocket"></i> Conocimientos en C, C++, Python, JavaScript.</li>
+                    <li><i class="fas fa-database"></i> Manejo de bases de datos.</li>
+                    <li><i class="fas fa-brain"></i> Uso de Visual Studio Code.</li>
+                    <li><i class="fas fa-cogs"></i> Manejo de Django, HTML, CSS.</li>
+                    <li><i class="fas fa-project-diagram"></i> Gestión de proyectos informáticos.</li>
+                </ul>
+            </div>
+            <!-- Tools Card -->
+            <div class="card">
+                <h2><i class="fas fa-tools"></i> Blandas</h2>
+                <ul>
+                    <li><i class="fas fa-users"></i> Liderazgo en proyectos</li>
+                    <li><i class="fas fa-handshake"></i> Trabajo en equipo</li>
+                    <li><i class="fas fa-lightbulb"></i> Capacidad de aprender</li>
+                    <li><i class="fas fa-wrench"></i> Resolución de problemas</li>
+                    <li><i class="fas fa-headset"></i> Atención al cliente</li>
+                    <li><i class="fas fa-sync-alt"></i> Adaptación</li>
+                </ul>
             </div>
         </div>
-        <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-                <h3>Apoyo en Ventas</h3>
-                <p><strong>Belsport</strong> - DIC 2024 a FEB 2025</p>
-                <p>
-                    Durante mis tres meses en Belsport, adquirí valiosos conocimientos sobre el trabajo en el sector retail. Aprendí técnicas de venta, protocolos de atención al cliente y estrategias para concretar una transacción de manera efectiva. También trabajé en bodega organizando mercadería y participé en el área de ventas.
-                </p>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume" class="resume">
+        <h2>My Resume</h2>
+        <div class="timeline">
+            <!-- Work Experience -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>Operario CCTV</h3>
+                    <p><strong>Rocktech</strong> - ENE 2023 a FEB 2023</p>
+                    <p>
+                        Primera experiencia laboral antes de ingresar a la universidad, donde desarrollé mis habilidades y enfrenté nuevos desafíos. Trabajé en equipo asegurando una buena coordinación entre turnos y aprendí a manejar protocolos y situaciones de alta presión con calma.
+                    </p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>Apoyo en Ventas</h3>
+                    <p><strong>Belsport</strong> - DIC 2024 a FEB 2025</p>
+                </div>
             </div>
         </div>
-    </div>
-
-    <!-- Educación -->
-    <div class="education">
-        <h2>Educación</h2>
-        <div class="education-item">
-            <h3>Ingeniería en Informática</h3>
-            <p><strong>Universidad Tecnológica Metropolitana</strong> - 2023 a Actualidad</p>
+        <!-- Education -->
+        <div class="education">
+            <h2>Educación</h2>
+            <div class="education-item">
+                <h3>Ingeniería en Informática</h3>
+                <p><strong>Universidad Tecnológica Metropolitana</strong> - 2023 a Actualidad</p>
+                <p>Av. José Pedro Alessandri 1242, Ñuñoa, Región Metropolitana</p>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<footer>
-    <div class="footer-content">
-        <div class="footer-icons">
-            <a href="mailto:cristobbalp@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
-            <a href="https://www.linkedin.com/in/cristobal-pinha" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/CristobalPinha" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="tel:+56965076547"><i class="fas fa-phone"></i></a>
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-icons">
+                <a href="mailto:cristobbalp@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/cristobbal19/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/CristobalPinha" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="tel:+56965076547"><i class="fas fa-phone"></i></a>
+            </div>
+            <p>&copy; 2025 Cristóbal Pinha. Todos los derechos reservados.</p>
         </div>
-        <p>&copy; 2025 Cristóbal Pinha. Todos los derechos reservados.</p>
-    </div>
-</footer>
+    </footer>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+</body>
 </html>
