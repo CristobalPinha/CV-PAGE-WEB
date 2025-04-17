@@ -1,6 +1,15 @@
 @media (max-width: 768px) {
+<<<<<<< HEAD
     body {
       transform: scale(2.0);
       transform-origin: top;
     }
   }
+=======
+  body {
+    transform: scale(1.1);
+    transform-origin: top;
+    overflow-x: hidden;
+  }
+}
+>>>>>>> 3e398b79bf66e67f639713b75952246eebe4c9f0
