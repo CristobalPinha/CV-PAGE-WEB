@@ -2,7 +2,7 @@
 My Resume Section
 =========================== */
 .resume {
-    background: #000;
+    background: #000; /* Fondo negro */
     background-image: url('../img/background-resume.png'); /* Sube un nivel y entra a la carpeta img */
     background-size: cover; /* Asegura que la imagen cubra toda el área */
     background-position: center; /* Centra la imagen */
@@ -17,6 +17,22 @@ My Resume Section
     position: relative; /* Necesario para el pseudo-elemento */
 }
 
+.resume h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #4dc3ff; /* Color celeste */
+    text-transform: uppercase;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.resume h3 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: white;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
 .resume::before {
     content: '';
     position: absolute;
@@ -29,84 +45,111 @@ My Resume Section
     z-index: 1; /* Coloca la sombra por encima del fondo */
 }
 
-/* Línea de tiempo */
-.timeline {
-    position: relative;
-    padding: 20px 0;
-    width: 100%;
-    max-width: 800px;
+/* Proyectos Universitarios */
+.projects {
+    margin-bottom: 50px;
+    text-align: center;
 }
 
-.timeline::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 4px;
-    height: 100%;
-    background: #4dc3ff; /* Línea central */
-}
-
-.timeline-item {
-    position: relative;
-    margin-bottom: 40px;
-    width: calc(50% - 20px);
-    opacity: 0; /* Oculta inicialmente */
-    transform: translateY(50px); /* Desplaza hacia abajo inicialmente */
-    animation: slideIn 0.8s ease-out forwards; /* Aplica la animación */
-}
-
-.timeline-item:nth-child(odd) {
-    left: 0;
-    text-align: right;
-    animation-delay: 0.2s; /* Retraso para los elementos impares */
-}
-
-.timeline-item:nth-child(even) {
-    left: 50%;
-    text-align: left;
-    animation-delay: 0.4s; /* Retraso para los elementos pares */
-}
-
-/* Animación de deslizamiento */
-@keyframes slideIn {
-    to {
-        opacity: 1; /* Hace visible el elemento */
-        transform: translateY(0); /* Devuelve el elemento a su posición original */
-    }
-}
-
-.timeline-dot {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 15px;
-    height: 15px;
-    background: #4dc3ff; /* Color celeste medio verdoso */
-    border-radius: 50%;
-    box-shadow: 0px 0px 10px 2px #4dc3ff;
-}
-
-.timeline-content {
-    position: relative;
-    padding: 10px 20px;
-    background: transparent; /* Sin fondo */
-    color: white;
-    text-align: inherit;
-}
-
-.timeline-content h3 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-    color: #4dc3ff; /* Color celeste medio verdoso */
+.projects h3 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #4dc3ff; /* Color celeste */
     text-transform: uppercase;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
 }
 
-.timeline-content p {
-    font-size: 1em;
-    line-height: 1.8;
+.project-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(52, 58, 64, 0.9); /* Fondo gris oscuro */
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 900px; /* Limita el ancho total de las tarjetas */
+    margin-left: auto;
+    margin-right: auto; /* Centra las tarjetas */
+    flex-direction: row; /* Asegura que el texto esté a la izquierda y la imagen a la derecha */
+}
+
+.project-item:nth-child(even) {
+    flex-direction: row-reverse; /* Alterna la posición de la imagen para proyectos pares */
+}
+
+.project-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.7);
+}
+
+.project-image {
+    width: 40%;
+    max-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.project-content {
+    flex: 1;
+    text-align: left;
+    color: white;
+    margin-right: 50px; /* Espaciado entre el texto y la imagen */
+    max-width: 500px; /* Limita el ancho de la descripción */
+}
+
+.project-content h4 {
+    font-size: 1.8rem;
+    color: #4dc3ff;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.project-content p {
+    font-size: 1rem;
+    margin-bottom: 10px;
     color: #d3d3d3; /* Tono gris claro */
+}
+
+.project-content ul {
+    margin-top: 10px;
+    padding-left: 20px;
+    list-style: disc;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Idiomas */
+.languages {
+    margin-bottom: 50px;
+    text-align: center; /* Centra el contenido */
+}
+
+.languages h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #4dc3ff; /* Color celeste */
+    text-transform: uppercase;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.languages ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto; /* Centra la lista */
+    display: inline-block; /* Hace que la lista ocupe solo el espacio necesario */
+}
+
+.languages ul li {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.languages ul li strong {
+    color: #4dc3ff; /* Color celeste para los títulos */
 }
