@@ -2,9 +2,9 @@
 
 Este proyecto es una versión inicial de mi Currículum Vitae en formato web. Está pensado como una presentación personal interactiva y visualmente atractiva, desarrollada desde cero con HTML y CSS.
 
-## 🚧 Estado del Proyecto
+## ✅ Estado del Proyecto
 
-> 🟡 En desarrollo – Se siguen agregando secciones y mejoras visuales.
+> 🟢 Terminado – Todas las secciones y características están implementadas. Se pueden hacer mejoras futuras si es necesario.
 
 ## ✨ Funcionalidades actuales
 
@@ -14,12 +14,13 @@ Este proyecto es una versión inicial de mi Currículum Vitae en formato web. Es
 - 🧠 **Habilidades separadas en técnicas y blandas**, lo que mejora la organización y claridad.
 - 🌐 **Accesos directos a perfiles profesionales** añadidos en el header (LinkedIn, GitHub, etc.).
 - 📑 Estructura CSS modular con archivos independientes por componente.
-- 📱 Adaptación inicial para dispositivos móviles en curso.
+- 📱 Sitio optimizado para dispositivos móviles.
+- ♿ Diseño accesible y amigable con diversas necesidades de los usuarios.
 
 ## 🆕 Cambios y objetivos recientes
 
-- ✅ Se reemplazo la sección de "Experiencia laboral" por "Proyectos Universitarios"**. Esta nueva sección está en desarrollo y presentará trabajos realizados durante la carrera.
-- ✅ Se añadio una nueva sección de "Idiomas"**, mostrando niveles de competencia (A2, B1, etc.). También en proceso.
+- ✅ **La sección de "Experiencia laboral" fue reemplazada por "Proyectos Universitarios"** que reflejan trabajos académicos significativos.
+- ✅ **Sección de "Idiomas"** añadida, indicando niveles de competencia (A2, B1, etc.).
 - ✅ Se reorganizó la sección de **Herramientas y habilidades**, ahora dividida en:
   - **Habilidades Técnicas** (lenguajes, frameworks, herramientas de desarrollo).
   - **Habilidades Blandas** (comunicación, trabajo en equipo, adaptabilidad, etc.).
@@ -51,7 +52,11 @@ CV-PAGE-WEB/
 ├── img/
 │   ├── background-resume.png
 │   ├── background.jpg
+│   ├── Gestsuite.png
+│   ├── Sistemas_de_prestamos.png
+│   ├── hidrogest.png
 │   └── profile.JPEG
 ├── index.html
 └── README.md
 ```
+
