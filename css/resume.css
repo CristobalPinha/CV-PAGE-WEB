@@ -68,20 +68,10 @@ My Resume Section
     border-radius: 15px;
     margin-bottom: 30px;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
     max-width: 900px; /* Limita el ancho total de las tarjetas */
     margin-left: auto;
     margin-right: auto; /* Centra las tarjetas */
     flex-direction: row; /* Asegura que el texto esté a la izquierda y la imagen a la derecha */
-}
-
-.project-item:nth-child(even) {
-    flex-direction: row-reverse; /* Alterna la posición de la imagen para proyectos pares */
-}
-
-.project-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.7);
 }
 
 .project-image {

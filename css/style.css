@@ -23,3 +23,16 @@ p {
     line-height: 1.8; /* Mejora la legibilidad con mayor espaciado entre líneas */
     color: #d3d3d3; /* Asegura un buen contraste */
 }
+.container {
+    max-width: 1200px; /* Ancho máximo para pantallas grandes */
+    margin: 0 auto; /* Centra el contenido */
+    padding: 0 15px; /* Espaciado interno */
+}
+.card {
+    background-color: #1a1a1a; /* Fondo oscuro */
+    color: white; /* Texto blanco */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
+    margin: 20px 0; /* Espaciado entre tarjetas */
+}

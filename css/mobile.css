@@ -1,6 +1,35 @@
+/* Media Query para pantallas pequeñas (máximo 768px) */
 @media (max-width: 768px) {
-    body {
-      transform: scale(2.0);
-      transform-origin: top;
+    .project-item {
+        flex-direction: column; /* Cambia la disposición a una columna */
+        text-align: center; /* Centra el texto */
     }
-  }
+
+    .project-image {
+        width: 100%; /* Asegura que la imagen ocupe todo el ancho */
+        height: auto; /* Mantén la proporción */
+        margin-bottom: 15px; /* Espaciado inferior entre la imagen y el texto */
+    }
+
+    .project-content {
+        margin-right: 0; /* Elimina el margen derecho en móviles */
+        text-align: center; /* Centra el texto */
+    }
+
+    .project-content h4 {
+        font-size: 18px; /* Ajusta el tamaño del título */
+        margin-top: 10px; /* Espaciado superior */
+    }
+
+    .project-content p, .project-content ul {
+        font-size: 15px; /* Ajusta el tamaño del texto */
+        line-height: 1.6; /* Mejora la legibilidad */
+    }
+
+    /* Ajusta las tarjetas de la sección "About" */
+    .card-container {
+        display: flex;
+        flex-direction: column; /* Apila las tarjetas verticalmente */
+        gap: 20px; /* Espaciado entre las tarjetas */
+    }
+}
