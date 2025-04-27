@@ -14,7 +14,6 @@ Este proyecto es una versión inicial de mi Currículum Vitae en formato web. Es
 - 🧠 **Habilidades separadas en técnicas y blandas**, lo que mejora la organización y claridad.
 - 🌐 **Accesos directos a perfiles profesionales** añadidos en el header (LinkedIn, GitHub, etc.).
 - 📑 Estructura CSS modular con archivos independientes por componente.
-- 📱 Sitio optimizado para dispositivos móviles.
 - ♿ Diseño accesible y amigable con diversas necesidades de los usuarios.
 
 ## 🆕 Cambios y objetivos recientes
